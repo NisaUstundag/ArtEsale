@@ -1,6 +1,7 @@
 import 'package:E_TICARET/constans.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:E_TICARET/screens/home/components/body.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,6 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
+      body: const Body(),
     );
   }
 
@@ -24,7 +26,7 @@ class HomeScreen extends StatelessWidget {
         IconButton(
           icon: SvgPicture.asset(
             "assets/icons/magnifying-glass-solid.svg",
-            colorFilter: ColorFilter.mode(kTextColor, BlendMode.srcIn),
+            colorFilter: const ColorFilter.mode(kTextColor, BlendMode.srcIn),
             height: 24.0, // Boyutu ayarladım
             width: 24.0,  // Boyutu ayarladım
           ),
@@ -33,13 +35,13 @@ class HomeScreen extends StatelessWidget {
         IconButton(
           icon: SvgPicture.asset(
             "assets/icons/cart-plus-solid.svg",
-            colorFilter: ColorFilter.mode(kTextColor, BlendMode.srcIn),
+            colorFilter: const ColorFilter.mode(kTextColor, BlendMode.srcIn),
             height: 24.0, // Boyutu ayarladım
             width: 24.0,  // Boyutu ayarladım
           ),
           onPressed: () {},
         ),
-        SizedBox(width: kDefauldPaddin / 3),
+        const SizedBox(width: kDefaultPadding / 3), // Düzeltilmiş padding
       ],
     );
   }
